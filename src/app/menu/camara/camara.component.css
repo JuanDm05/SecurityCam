@@ -1,0 +1,150 @@
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #003785
+    ;
+    padding-top: 20px;
+    
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .circular-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .izquierda-logo {
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px; /* Espaciado entre el icono y el texto */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+  }
+  
+  .sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar li:hover {
+    background-color: #555;
+  }
+  
+  .sidebar a:hover {
+    color: blanchedalmond;
+  }
+  
+  .content {
+    margin-left: 220px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .add-camera-image {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .add-camera-image:hover {
+    transform: scale(1.2);
+  }
+  
+  .security-camera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    background-color: #ffffff; /* Agrega un fondo si es necesario */
+    padding: 20px; /* Ajusta el espacio interno según tus necesidades */
+    border-radius: 10px; /* O cualquier otro valor de borde que desees */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombra si es necesario */
+  }
+  
+  .security-camera img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+    border-radius: 10px; /* O cualquier otro valor de borde que desees */
+  }
+  
+  .security-camera p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .on .status-indicator {
+    background-color: green;
+  }
+  
+  .off .status-indicator {
+    background-color: red;
+  }.app-container {
+    display: flex;
+  }
+  
+ 
+  .content {
+    flex-grow: 1;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  
+  .security-camera {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    margin-left: 120px; /* Márgenes para separar del menú lateral */
+    max-width: 50%; /* Para que la imagen sea responsiva y no pase del límite */
+  }
+  
+  
+  

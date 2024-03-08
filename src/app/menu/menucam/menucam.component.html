@@ -1,0 +1,34 @@
+<div class="app-container">
+  <div class="sidebar">
+    <div class="logo-container">
+      <img src="assets/images/camaralogo.jpg" alt="Logo del Menú" class="circular-logo">
+    </div>
+    <ul class="menu-list">
+      <li><a routerLink="/" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Security Cam</a></li>
+      <li>
+        <a routerLink="/camara">
+          <img src="assets/images/home.png" class="izquierda-logo mr-2 mr-sm-0" alt="Home Icon">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/estadisticas']">
+          <img src="assets/images/configuraciones.png" class="izquierda-logo mr-2 mr-sm-0" alt="Settings Icon">
+          Estadísticas
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/historial']">
+          <img src="assets/images/historiales.png" class="izquierda-logo mr-2 mr-sm-0" alt="History Icon">
+          Historial
+        </a>
+      </li>
+      <li class="logout">
+        <a [routerLink]="['/login']">
+          <img src="assets/images/cerrarsesion.png" class="izquierda-logo mr-2 mr-sm-0" alt="Log Out Icon">
+          Log out
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
