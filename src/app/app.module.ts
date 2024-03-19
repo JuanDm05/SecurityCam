@@ -28,7 +28,7 @@ import { CamaraComponent } from './menu/camara/camara.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule ,
     HttpClientModule,
     ReactiveFormsModule
     

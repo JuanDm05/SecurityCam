@@ -16,9 +16,9 @@ export class RegisterComponent {
   constructor(private usersService: UsersService) {}
 
 
- // ngOnInit(): void {
- //   this.usersService.getUsers().subscribe((result: Users[]) => (this.users = result));
-  //}
+  ngOnInit(): void {
+    this.usersService.getUsers().subscribe((result: Users[]) => (this.users = result));
+  }
 
 
 }

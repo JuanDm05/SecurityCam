@@ -1,150 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.sidebar {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #214d87;
+
+}
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+  background-color:#3498db;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #3498db;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px; /* Ajusta el espacio superior según tus preferencias */
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  height: 50vh; /* Ajusta la altura según tus preferencias (mitad de la pantalla) */
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  background-color: #3498db; /* Cambia este color a tu tono de azul preferido */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #0e2431;
+  
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
+.navbar .menu-items {
+    padding-top: 120px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    height: 100vh;
+    width: 30%;
+    transform: translate(-150%);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 200px;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    background-color: #3498db; /* Cambia este color a tu tono de azul preferido */
     position: fixed;
     top: 0;
+    border-radius: 5%;
     left: 0;
-    background-color: #003785
-    ;
-    padding-top: 20px;
+    opacity: 85%;
     
   }
-  
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .circular-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .izquierda-logo {
-    
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 10px; /* Espaciado entre el icono y el texto */
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
-  }
-  
-  .sidebar li {
-    display: flex;
-    align-items: center;
-    padding: 12px;
-    text-align: left;
-    margin-bottom: 10px;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sidebar a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  .sidebar li:hover {
-    background-color: #555;
-  }
-  
-  .sidebar a:hover {
-    color: blanchedalmond;
-  }
-  
-  .content {
-    margin-left: 220px;
-    padding: 20px;
-    position: relative;
-  }
-  
-  .add-camera-image {
-    position: fixed;
-    bottom: 70px;
-    right: 70px;
-    cursor: pointer;
-    width: 50px;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .add-camera-image:hover {
-    transform: scale(1.2);
-  }
-  
-  .security-camera {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%; /* Ajusta el ancho según tus necesidades */
-    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
-    background-color: #ffffff; /* Agrega un fondo si es necesario */
-    padding: 20px; /* Ajusta el espacio interno según tus necesidades */
-    border-radius: 10px; /* O cualquier otro valor de borde que desees */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombra si es necesario */
-  }
-  
-  .security-camera img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
-    border-radius: 10px; /* O cualquier otro valor de borde que desees */
-  }
-  
-  .security-camera p {
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .on .status-indicator {
-    background-color: green;
-  }
-  
-  .off .status-indicator {
-    background-color: red;
-  }.app-container {
-    display: flex;
-  }
-  
- 
-  .content {
-    flex-grow: 1;
-    padding: 50px;
-    box-sizing: border-box;
-  }
-  
-  .security-camera {
-    margin-top: -10px;
-    margin-bottom: 20px;
-    margin-left: 120px; /* Márgenes para separar del menú lateral */
-    max-width: 50%; /* Para que la imagen sea responsiva y no pase del límite */
-  }
-  
-  
   
